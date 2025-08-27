@@ -1,0 +1,21 @@
+accounts:
+
+  # Account #1
+  - id: random_id
+    token:
+      type: null
+      value: null
+    groups:
+      - 1
+      - 2
+      - 3
+
+  # Account #2
+  - id: random_id
+    token:
+      type: null
+      value: null
+    groups:
+      - 1
+      - 2
+      - 3
