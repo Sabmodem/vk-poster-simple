@@ -33,7 +33,7 @@ async def post(data: UploadData):
         logger.info(f'uploading {data.filepath} to group {data.group_id}')
         attachment = await photo_uploader.upload(file_source=data.filepath, group_id=data.group_id)
         logger.info(f'uploaded successfully: {attachment} posting started')
-        await api.wall.post(owner_id=data.group_id, attachment=[attachment], attachments_list='''[{"type":"action_button","action_button":{"type":"message_to_community","title":"Написать сообществу","description":"Открывает чат с сообществом"}}]''')
+        await api.wall.post(owner_id=data.group_id, attachment=[attachment])
         logger.info('posted successfully')
     except Exception as e:
         logger.error('posting error', exc_info=True)
